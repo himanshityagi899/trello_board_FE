@@ -143,10 +143,22 @@ const ProjectDetails = ({ projectId, setView, setActiveTab }) => {
     useEffect(() => {
         const fetchProjectDetails = async () => {
             try {
+                // const response = await axios.get(`/api/projects/${projectId}`);
+                // setProject(response.data);
+                // const tasksResponse = await axios.get(`/api/projects/${projectId}/tasks`);
+                // setTasks(tasksResponse.data);
+
                 const response = await axios.get(`/api/projects/${projectId}`);
-                setProject(response.data);
+                const projectData = {
+                    id: response.data.id,
+                    name: response.data.name, // Correctly map name
+                    description: response.data.description // Correctly map description
+                };
+                setProject(projectData);
+
                 const tasksResponse = await axios.get(`/api/projects/${projectId}/tasks`);
                 setTasks(tasksResponse.data);
+                
             } catch (error) {
                 console.error('Error fetching project details:', error);
             }
