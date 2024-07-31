@@ -1,0 +1,167 @@
+/* Dashboard container */
+.dashboard-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;  */
+    /* justify-content: center;  */
+    /* height: calc(100vh - 50px);  */
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding: 5px 15px; /* Reduced padding for compactness */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Navbar content */
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px; /* Reduced height */
+}
+
+/* Logo section */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    background-color: #90ee90; /* Light green background */
+    padding: 5px; /* Reduced padding for compactness */
+    border-radius: 5px;
+    font-size: 20px; /* Adjusted font size */
+    color: #fff;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 16px; /* Adjusted font size */
+    font-weight: bold;
+}
+
+/* Profile section */
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    font-size: 20px; /* Adjusted font size */
+    width: 30px; /* Adjusted size */
+    height: 30px; /* Adjusted size */
+    margin: 0 5px;
+}
+
+.male-avatar {
+    background-color: #add8e6; /* Light blue for male */
+    padding: 5px; /* Reduced padding for compactness */
+}
+
+.female-avatar {
+    background-color: #ffb6c1; /* Light pink for female */
+    padding: 5px; /* Reduced padding for compactness */
+}
+
+/* Search and add section */
+.search-add-section {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 5px 8px; /* Reduced padding */
+    margin-right: 10px;
+}
+
+.add-icon {
+    font-size: 24px; /* Adjusted font size */
+    color: white;
+    background-color: rgb(235, 116, 116); /* Red background */
+    padding: 8px; /* Padding for round shape */
+    border-radius: 40%; /* Round shape */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for background color and scaling */
+    cursor: pointer;
+}
+
+.add-icon:hover {
+    background-color: rgb(215, 127, 127); /* Darker red on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Navigation links */
+.nav-links {
+    margin-top: 4px; /* Reduced margin for compactness */
+}
+
+.nav-links-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 14px; /* Adjust gap between links */
+}
+
+.nav-links-list li {
+    font-size: 14px; /* Adjusted font size */
+    cursor: pointer;
+    padding: 5px 10px; /* Reduced padding */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Transition for background color and text color */
+}
+
+.nav-links-list li:hover {
+    background-color: #90ee90; 
+    color: #09a509; /* Change text color to black or adjust as needed */
+}
+
+.greeting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 160px; /* Space from the navbar */
+}
+
+/* Greeting message */
+.greeting-message {
+    font-size: 52px;
+    font-weight: bold;
+    color: #514e4e;
+    margin-bottom: 10px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Welcome message */
+.welcome-message {
+    font-size: 26px;
+    font-weight: bold;
+    color: #898989;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for welcome message */
+.welcome-message:hover {
+    color: #09a509;
+    transform: scale(1.05);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

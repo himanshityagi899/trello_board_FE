@@ -1,0 +1,37 @@
+/* TaskCard.css */
+
+.task-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.task-card-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.task-card-info {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.task-card-info p {
+    margin: 0;
+}

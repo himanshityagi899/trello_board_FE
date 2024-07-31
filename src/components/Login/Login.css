@@ -1,0 +1,96 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-shape {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 90"><polygon points="0,0 50,20 80,0 80,90 0,100" fill="%23e0f7fa" /><polygon points="0,0 50,20 0,100" fill="%23ffcc90" /></svg>') no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.styled-text {
+    font-size: 6rem;
+    font-weight: bold;
+    
+    color: #FF6F61; /* Orange gradient or purple gradient */
+    transition: transform 0.6s;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.styled-text:hover {
+    transform: translateY(-10px);
+}
+
+.form-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-left: 50%;
+    background: #fff;
+    position: relative;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+form h2 {
+    margin-bottom: 2rem;
+    color: #2c2a29e8 !important; /* Ensure the color is applied */
+    text-align: center;
+}
+input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #dfb597; /* Light blue */
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #f41905a5 !important; /* Light blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #75ac78 !important; /* Light green */
+    transform: translateY(-5px);
+}
+
+p {
+    text-align: center;
+}
+
+p a {
+    color: #56afd9; /* Light blue */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

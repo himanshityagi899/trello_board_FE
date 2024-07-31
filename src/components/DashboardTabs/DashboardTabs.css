@@ -1,0 +1,336 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+
+.dashboard-tabs-container {
+    position: relative; /* This allows the fixed button to stay in place relative to this container */
+    padding-top: 60px; /* Space for the fixed button */
+    
+}
+
+.fixed-create-project-button {
+    position: fixed;
+    top: 140px !important; 
+    right: 450px !important; /* Adjust right position as needed */
+    padding: 10px 10px; /* Adjust padding to make the button small */
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    z-index: 1000; /* Ensure the button is above other elements */
+    width: 24%; /* Fixed width for the button */
+    text-align: center; 
+    
+    
+}
+
+.create-project-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
+.create-project-form {
+    background: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Spacing inside the form */
+    max-width: 400px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the form horizontally */
+    position: relative; /* Position for any additional elements */
+}
+
+.create-project-form h3 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+    text-align: center; /* Center the heading */
+    color: #333; /* Dark text color */
+}
+
+.create-project-form input {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Spacing inside the input */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.create-project-form button {
+    width: 100%; /* Full width buttons */
+    padding: 10px; /* Spacing inside the button */
+    margin-top: 10px; /* Space above button */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px; /* Font size */
+    color: white;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.create-project-form button:first-of-type {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+}
+
+.create-project-form button:first-of-type:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.create-project-form button:last-of-type {
+    background-color: #f5f5f5; /* Secondary button color */
+    color:white; /* Text color */
+    border: 1px solid #ddd; /* Border color */
+}
+
+.create-project-form button:last-of-type:hover {
+    background-color: #ddd; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.tabs-buttons {
+    display: flex;
+    justify-content: center;
+   
+    
+    
+
+}
+
+.tabs-buttons button {
+    margin: 0 50px; /* Space between buttons */
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 28%;
+    margin-top: 8%;
+    
+}
+
+.tabs-buttons button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.project-item {
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.project-details {
+    background: #fff; /* White background for the details container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Spacing inside the container */
+    max-width: 600px; /* Limit the maximum width */
+    margin: 20px auto; /* Center the container horizontally with space above and below */
+    position: relative; /* Position for any additional elements */
+    text-align: center;
+
+}
+
+.project-details h3 {
+    font-size: 28px; /* Heading size */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #333; /* Dark text color */
+}
+
+.project-details p {
+    font-size: 16px; /* Font size for description */
+    color: #555; /* Slightly lighter text color */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.create-task-button {
+    display: block; /* Block display to take full width */
+    background-color: #28a745; /* Green button color */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Spacing inside the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    margin-bottom: 20px; /* Space below the button */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width of its container */
+    font-size: 16px; /* Font size */
+}
+
+.create-task-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.see-all-tasks-button{
+    background-color: #f5f5f5; /* Light gray button color */
+    color: white; /* Dark text color */
+    border: 1px solid #ddd; /* Border color */
+    padding: 12px 20px; /* Spacing inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width of its container */
+    font-size: 16px;
+}
+
+.back-to-list-button {
+    background-color: #f5f5f5; /* Light gray button color */
+    color: white; /* Dark text color */
+    border: 1px solid #ddd; /* Border color */
+    padding: 12px 20px; /* Spacing inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width of its container */
+    font-size: 16px; /* Font size */
+}
+
+.back-to-list-button:hover {
+    background-color: #ddd; /* Darker gray on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
+
+.create-task-button, .see-all-tasks-button, .back-to-list-button {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.create-task-form {
+    background-color: #f9f9f9; /* Light background for the form */
+    border: 1px solid #ddd; /* Light border around the form */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the form */
+    max-width: 400px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.create-task-form h4 {
+    margin-bottom: 15px; /* Space below the heading */
+    font-size: 18px; /* Adjust font size for the heading */
+    text-align: center; /* Center the heading text */
+}
+
+.create-task-form input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: calc(100% - 16px); /* Full width minus padding */
+    border: 1px solid #ccc; /* Border color for input fields */
+    border-radius: 4px; /* Slightly rounded corners for input fields */
+}
+
+.create-task-form button {
+    display: block; /* Ensure buttons are displayed as block elements */
+    width: calc(50% - 10px); /* Full width with some space for alignment */
+    padding: 10px; /* Padding inside the buttons */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Slightly rounded corners for buttons */
+    margin: 5px auto; /* Center buttons horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+}
+
+.create-task-form button:first-child {
+    background-color: #4CAF50; /* Green background for create button */
+    color: white; /* White text color */
+}
+
+.create-task-form button:last-child {
+    background-color: #f44336; /* Red background for cancel button */
+    color: white; /* White text color */
+}
+
+
+
+
+.task-list {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.task-list h4 {
+    margin-bottom: 10px;
+}
+
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-details.show-tasks {
+    filter: blur(5px); /* Apply blur to the background */
+}
+
+.project-details.show-tasks .create-task-button, 
+.project-details.show-tasks .see-all-tasks-button, 
+.project-details.show-tasks .back-to-list-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+.tab-nav {
+    width: 200px; /* Width of the vertical tab nav */
+    background-color: #f5f2f2c1; /* Light grey background */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Fixed position on the left */
+    height: 100%; /* Full height */
+}
+
+.tab-button {
+    background-color: #f68473ef !important;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80%; /* Full width of the tab-nav */
+    margin: 3%;
+    font-weight: bold;
+    color:white;
+}
+.tab-button.active {
+    background-color: #c4dce0 ; /* Highlight color for active tab */
+}
+
+
+.tab-content {
+    flex-grow: 1;
+    margin-left: 200px; /* Space for the vertical tab nav */
+    padding: 20px;
+    background-color: #ffffff; /* Background color for content area */
+}
+

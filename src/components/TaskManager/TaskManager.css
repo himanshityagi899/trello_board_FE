@@ -1,0 +1,23 @@
+.task-manager {
+    padding: 1rem;
+}
+
+.fixed-create-project-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fixed-create-project-button:hover {
+    background-color: #218838;
+}
+
+.task-manager button {
+    margin: 1rem 0;
+}
