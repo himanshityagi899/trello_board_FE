@@ -5,20 +5,43 @@ import './Register.css';
 import axios from '../../axiosConfig';
 import { useNavigate } from 'react-router-dom';
 
-const Register = ({ history }) => {
+const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
+    // Email validation function
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Frontend validation
+        if (!name || !email || !password) {
+            setError('All fields are required.');
+            return;
+        }
+        
+        if (!validateEmail(email)) {
+            setError('Invalid email format.');
+            return;
+        }
+
+        if (password.length < 6) {
+            setError('Password must be at least 6 characters long.');
+            return;
+        }
+
         try {
             const response = await axios.post('/api/users/register', { name, email, password });
             if (response.data) {
-                // Redirect to login page after successful registration
-               navigate('/login');
+                navigate('/login'); // Redirect to login page after successful registration
             }
         } catch (error) {
             console.error('Registration failed:', error);
