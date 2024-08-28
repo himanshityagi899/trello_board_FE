@@ -33,18 +33,20 @@ const Register = () => {
             return;
         }
 
-        if (password.length < 6) {
-            setError('Password must be at least 6 characters long.');
+        if (password.length < 5) {
+            setError('Password must be at least 5 characters long.');
             return;
         }
 
         try {
             const response = await axios.post('/api/users/register', { name, email, password });
+            console.log('Server response:', response); // Log response for debugging
             if (response.data) {
                 navigate('/login'); // Redirect to login page after successful registration
             }
         } catch (error) {
             console.error('Registration failed:', error);
+            console.error('Error response:', error.response); // Log error response for debugging
             setError('Registration failed. Please try again.');
         }
     };

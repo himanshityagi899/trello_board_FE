@@ -20,8 +20,8 @@ const Login = () => {
             setErrorMessage('Please enter a valid email.');
             return false;
         }
-        if (password.length < 6) {
-            setErrorMessage('Password must be at least 6 characters.');
+        if (password.length < 5) {
+            setErrorMessage('Password must be at least 5 characters.');
             return false;
         }
         setErrorMessage(''); // Clear error if all validations pass
